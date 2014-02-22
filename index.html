@@ -40,8 +40,23 @@
 	<div id="c2canvasdiv">
 
 		<div id="slide-menu">
+			<a class="more-games" href="http://m.softgames.de">More games</a> 
 			
-			<button id="toggle-menu">Menu</button>
+			<div id="rate-game">
+				<a href="#" class="star"></a>
+				<a href="#" class="star"></a>
+				<a href="#" class="star"></a>
+				<a href="#" class="star"></a>
+				<a href="#" class="star"></a>
+			</div>
+
+			<div id="social-buttons">
+				<div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+
+				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+			</div>
+
+			<button class="toggle-menu">Menu</button>
 		</div>
 	
 		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
@@ -75,6 +90,7 @@
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
     This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
 	<script src="c2runtime.js"></script>
+<div id="fb-root"></div>
 
     <script>
 		// Size the canvas to fill the browser viewport.
@@ -102,6 +118,25 @@
 		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
 		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
 		
+		// Facebook API
+		!function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=512017395487275";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk');
+
+		// Twitter API
+		!function(d,s,id){
+			var js,fjs=d.getElementsByTagName(s)[0];
+			if(!d.getElementById(id)){
+				js=d.createElement(s);
+				js.id=id;
+				js.src="https://platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js,fjs);
+			}
+		}(document,"script","twitter-wjs");
     </script>
 </body> 
 </html> 
