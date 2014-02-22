@@ -11,6 +11,8 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta name="HandheldFriendly" content="true" />
 
+	<link href="css/main.css" rel="stylesheet" />
+
     <!-- All margins and padding must be zero for the canvas to fill the screen. -->
 	<style type="text/css">
 		* {
@@ -36,6 +38,11 @@
 	
 	<!-- The canvas must be inside a div called c2canvasdiv -->
 	<div id="c2canvasdiv">
+
+		<div id="slide-menu">
+			
+			<button id="toggle-menu">Menu</button>
+		</div>
 	
 		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
 		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
@@ -58,6 +65,11 @@
 	<!-- Construct 2 exported games require jQuery. -->
 	<script src="jquery-2.0.0.min.js"></script>
 
+	<!-- Polyfill to remove click delays on browsers with touch UIs -->
+	<script src="js/fastclick.js"></script>
+
+	<!-- Main jquery script -->
+	<script src="js/main.js"></script>
 
 	
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.

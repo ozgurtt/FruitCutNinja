@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
 	open = require('gulp-open'),
+	sass = require('gulp-sass'),
 	jshint = require('gulp-jshint'),
 	stylish = require('jshint-stylish'),
 
@@ -25,6 +26,13 @@ gulp.task('open', function() {
 	}));
 });
 
+gulp.task('sass', function() {
+	gulp.src('./sass/*.scss')
+		.pipe(sass())
+		.pipe(gulp.dest('./css'))
+		.pipe(livereload(server));
+});
+
 gulp.task('server', function() {
 
 	var app = connect()
@@ -48,5 +56,9 @@ gulp.task('server', function() {
 		gulp.run('sass');
 	});
 
-	gulp.run('jshint');
+	gulp.watch('./sass/*.scss', function() {
+		gulp.run('sass');
+	});
+
+	gulp.run('jshint', 'sass');
 });

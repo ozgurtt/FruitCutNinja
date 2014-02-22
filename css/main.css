@@ -1,0 +1,17 @@
+#c2canvasdiv {
+  position: relative; }
+
+#slide-menu {
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  width: 100%;
+  top: -90%; }
+
+#toggle-menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.25); }
