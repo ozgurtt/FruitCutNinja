@@ -7,7 +7,7 @@
 	height: 40%;
 	background: rgba(255,255,255, 0.25);
 	width: 100%;
-	top: 0; // -90%;
+	top: -32%;
 
 	.toggle-menu {
 		position: absolute;
@@ -20,7 +20,7 @@
 
 	.more-games {
 		width: 100%;
-		background: red;
+		background: rgba(255, 0, 255, 0.5);
 		display: block;
 		line-height: 300%;
 		font-size: 100%;
@@ -37,7 +37,6 @@
 		display: inline-block;
 		width: 20%;
 		height: 100%;
-		//background: yellow;
 		background: center center / 100% 100% url("../images/star-icon.png");
 
 		&.selected {
@@ -47,12 +46,15 @@
 }
 
 #social-buttons {
-	
+	vertical-align: top;
 	text-align: center;
-
-	> div, > iframe {
-		margin: 20px;
+	height: 20px;
+	.share-button, .share-button {
+		overflow: hidden;
+		width: 25%;
+		margin: 0 10%;
 		vertical-align: top;
-		display: inline-block;
+		display: block;
+		display: inline-block !important;
 	}
 }

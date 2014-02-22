@@ -51,9 +51,14 @@
 			</div>
 
 			<div id="social-buttons">
-				<div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+				<div class="share-button">
+					<div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+				</div>
+				
 
-				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+				<div class="share-button">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+				</div>
 			</div>
 
 			<button class="toggle-menu">Menu</button>
@@ -103,6 +108,9 @@
 		{			
 			// Create new runtime using the c2canvas
 			cr_createRuntime("c2canvas");
+
+			// attach fast click
+			FastClick.attach(document.body);
 		});
 		
 		// Pause and resume on page becoming visible/invisible

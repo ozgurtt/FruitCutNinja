@@ -6,7 +6,7 @@
   height: 40%;
   background: rgba(255, 255, 255, 0.25);
   width: 100%;
-  top: 0; }
+  top: -32%; }
   #slide-menu .toggle-menu {
     position: absolute;
     bottom: 0;
@@ -16,7 +16,7 @@
     background: rgba(255, 255, 255, 0.25); }
   #slide-menu .more-games {
     width: 100%;
-    background: red;
+    background: rgba(255, 0, 255, 0.5);
     display: block;
     line-height: 300%;
     font-size: 100%;
@@ -36,8 +36,13 @@
       background-image: url("../images/star-icon-red.png"); }
 
 #social-buttons {
-  text-align: center; }
-  #social-buttons > div, #social-buttons > iframe {
-    margin: 20px;
+  vertical-align: top;
+  text-align: center;
+  height: 20px; }
+  #social-buttons .share-button, #social-buttons .share-button {
+    overflow: hidden;
+    width: 25%;
+    margin: 0 10%;
     vertical-align: top;
-    display: inline-block; }
+    display: block;
+    display: inline-block !important; }

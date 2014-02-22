@@ -7,7 +7,7 @@ $(function() {
 	var $menu = $('#slide-menu');
 	var $stars = $('.star');
 
-	$('.toggle-menu').on('click tap', function() {
+	$('.toggle-menu').on('click tap touchstart', function() {
 
 		$menu.animate({
 			top: toggled ? '-32%' : 0
@@ -18,7 +18,7 @@ $(function() {
 		return false;
 	});
 
-	$stars.on('click tap', function() {
+	$stars.on('click tap touchstart', function() {
 		var $self = $(this);
 		var index = $self.index();
 
